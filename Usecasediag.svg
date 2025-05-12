@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 800">
+  <style>
+    .actor {
+      fill: #f0f0f0;
+      stroke: #333;
+      stroke-width: 2;
+    }
+    .use-case {
+      fill: #e6f7ff;
+      stroke: #333;
+      stroke-width: 2;
+      rx: 50;
+      ry: 30;
+    }
+    .system-border {
+      fill: white;
+      stroke: #333;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+    }
+    .actor-text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .use-case-text {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+    }
+    .relationship {
+      stroke: #333;
+      stroke-width: 1.5;
+      fill: none;
+    }
+    .extend-relationship {
+      stroke: #333;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-dasharray: 5,5;
+    }
+  </style>
+  
+  <!-- System Border -->
+  <rect x="300" y="50" width="600" height="700" class="system-border" />
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Job Finding Platform</text>
+  
+  <!-- Actors -->
+  <!-- Employee Actor -->
+  <g transform="translate(100, 300)">
+    <circle cx="50" cy="0" r="50" class="actor" />
+    <line x1="50" y1="50" x2="50" y2="150" stroke="#333" />
+    <line x1="50" y1="75" x2="20" y2="100" stroke="#333" />
+    <line x1="50" y1="75" x2="80" y2="100" stroke="#333" />
+    <line x1="50" y1="150" x2="20" y2="200" stroke="#333" />
+    <line x1="50" y1="150" x2="80" y2="200" stroke="#333" />
+    <text x="50" y="230" class="actor-text">Employee</text>
+  </g>
+  
+  <!-- Employer Actor -->
+  <g transform="translate(1050, 300)">
+    <circle cx="-50" cy="0" r="50" class="actor" />
+    <line x1="-50" y1="50" x2="-50" y2="150" stroke="#333" />
+    <line x1="-50" y1="75" x2="-20" y2="100" stroke="#333" />
+    <line x1="-50" y1="75" x2="-80" y2="100" stroke="#333" />
+    <line x1="-50" y1="150" x2="-20" y2="200" stroke="#333" />
+    <line x1="-50" y1="150" x2="-80" y2="200" stroke="#333" />
+    <text x="-50" y="230" class="actor-text">Employer</text>
+  </g>
+  
+  <!-- System Admin Actor -->
+  <g transform="translate(600, 750)">
+    <circle cx="0" cy="-50" r="50" class="actor" />
+    <line x1="0" y1="0" x2="0" y2="100" stroke="#333" />
+    <line x1="0" y1="25" x2="-30" y2="50" stroke="#333" />
+    <line x1="0" y1="25" x2="30" y2="50" stroke="#333" />
+    <line x1="0" y1="100" x2="-30" y2="150" stroke="#333" />
+    <line x1="0" y1="100" x2="30" y2="150" stroke="#333" />
+    <text x="0" y="180" class="actor-text">System Admin</text>
+  </g>
+  
+  <!-- Use Cases for Employee -->
+  <ellipse cx="500" cy="150" rx="100" ry="40" class="use-case" />
+  <text x="500" y="155" class="use-case-text">Search Jobs</text>
+  
+  <ellipse cx="400" cy="250" rx="100" ry="40" class="use-case" />
+  <text x="400" y="255" class="use-case-text">Apply to Job</text>
+  
+  <ellipse cx="600" cy="250" rx="100" ry="40" class="use-case" />
+  <text x="600" y="255" class="use-case-text">Manage Profile</text>
+  
+  <ellipse cx="500" cy="350" rx="100" ry="40" class="use-case" />
+  <text x="500" y="355" class="use-case-text">Track Applications</text>
+  
+  <!-- Use Cases for Employer -->
+  <ellipse cx="700" cy="150" rx="100" ry="40" class="use-case" />
+  <text x="700" y="155" class="use-case-text">Post Job</text>
+  
+  <ellipse cx="800" cy="250" rx="100" ry="40" class="use-case" />
+  <text x="800" y="255" class="use-case-text">Review Applications</text>
+  
+  <ellipse cx="600" cy="250" rx="100" ry="40" class="use-case" />
+  <text x="600" y="255" class="use-case-text">Manage Job Listings</text>
+  
+  <!-- Use Cases for System Admin -->
+  <ellipse cx="500" cy="555" rx="100" ry="40" class="use-case" />
+  <text x="500" y="555" class="use-case-text">Moderate Content</text>
+  
+  <ellipse cx="700" cy="555" rx="100" ry="40" class="use-case" />
+  <text x="700" y="555" class="use-case-text">Manage Users</text>
+  
+  <ellipse cx="600" cy="600" rx="100" ry="40" class="use-case" />
+  <text x="600" y="605" class="use-case-text">Generate Reports</text>
+  
+  <!-- Relationships -->
+  <!-- Employee Connections -->
+  <path d="M150,300 L500,150" class="relationship" />
+  <path d="M150,300 L400,250" class="relationship" />
+  <path d="M150,300 L600,250" class="relationship" />
+  <path d="M150,300 L500,350" class="relationship" />
+  
+  <!-- Employer Connections -->
+  <path d="M1000,300 L700,150" class="relationship" />
+  <path d="M1000,300 L800,250" class="relationship" />
+  <path d="M1000,300 L600,250" class="relationship" />
+  
+  <!-- System Admin Connections -->
+  <path d="M600,700 L500,590" class="relationship" />
+  <path d="M600,700 L700,590" class="relationship" />
+  <path d="M600,700 L600,610" class="relationship" />
+  
+  <!-- Extend Relationships -->
+  <path d="M400,250 L460,150" class="extend-relationship" />
+  <text x="440" y="215" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">&lt;&lt;extend&gt;&gt;</text>
+  
+  <path d="M800,250 L700,150" class="extend-relationship" />
+  <text x="760" y="215" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">&lt;&lt;extend&gt;&gt;</text>
+</svg>
