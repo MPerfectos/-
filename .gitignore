@@ -1,4 +1,6 @@
 # SSH keys (critical!)
+id_rsa
+id_rsa.pub
 alsomykey
 alsomykey.pub
 mykey
